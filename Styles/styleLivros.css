@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --cor-primaria: rgb(201, 178, 178);
+    --cor-secundaria: ;
+    --cor-terciaria: ;
+    --cor-hover: #22d5fd6c;
+
+    --fonte-principal:'Montserrat', sans-serif;
+    --fonte-secundaria: arial; 
+    /*1 rem = 16px*/
+}
+body {
+    /* height: 100vh; */
+    box-sizing: border-box; /*adicionando boxes*/
+    margin: 10px 5px 0;
+    background-color: var(--cor-primaria);
+    
+}
+.cabecalho {
+    padding: 1% 1% 1% 15%;
+}
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.titulo {
+    font-size: 31.25rem;
+    border-image: 10px;
+}
+h1 {
+    color: darkgreen;
+}
+span {
+    color: rgb(255, 0, 0);
+}
+.livro { /*utilizando box pra posicionar os elementos contidos nesta classe*/
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px;  /*distancia entre lacuna, lacuna entre linhas, lacuna entre colunas*/
+    align-items: center; /*alinha de acordo com o centro do maior iten da lista*/ 
+    justify-content: space-between;
+    
+}
+
+.sumario { /* utilizando strong class, na chamada usamos só o .nomeDaClasse*/ 
+    color:blue;
+}
+
+.textoOrelha {
+    font-size: 1rem;
+    
+    /*font-family: "Cossette Titre", sans-serif;    adicionando uma fonte importada a uma classe do projeto
+    font-weight: 400;
+    font-style: normal; */ 
+}
+
+
+
+.textoSumario {
+    white-space: pre-line;
+    font-size: 1rem;
+     
+  }
+
+
+.textoSumario { /*colocando os textos dentro de um retangulo e configurando margem, borda e cor*/
+       margin: 5px; 
+       border: 2px solid black; 
+       padding: 1px 5px;
+   }
+
+.textoOrelha { /*colocando os textos dentro de um retangulo e configurando margem, borda e cor*/
+       margin: 5px; 
+       border: 2px solid black;
+       padding: 1px 5px;
+       
+   }
+
+   
+.livro__botoes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+
+}
+.livro__botoesRedes{ 
+    background-color: greenyellow;
+    width: 8.125rem; /*largura da caixa*/
+    margin: 10px; /*altura entre a divisão do main e dos botoes*/
+    text-align: center;
+    border-radius: 10px; /*arredondamento da quina*/
+    font-size: 1.5rem;
+    color:black; 
+    padding: 1rem 0; /*vertical, horizontal*/
+    text-decoration: none;
+}
+
+.rodape {
+    
+    padding: 10px 0;
+    color: #000000;
+    background-color: #22D4FD;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+}
