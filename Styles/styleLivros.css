@@ -14,16 +14,23 @@
     --fonte-secundaria: arial; 
     /*1 rem = 16px*/
 }
+
 body {
-    /* height: 100vh; */
+
     box-sizing: border-box; /*adicionando boxes*/
     margin: 10px 5px 0;
-    background-color: var(--cor-primaria);
-    
+    background-color: var(--cor-primaria);    
 }
+
 .cabecalho {
     padding: 1% 1% 1% 15%;
 }
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
 .cabecalho__menu__link {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.25rem;
@@ -32,32 +39,50 @@ body {
     text-decoration: none;
 }
 
-.cabecalho__menu {
-    display: flex;
-    gap: 80px;
-}
-
 .titulo {
     font-size: 31.25rem;
     border-image: 10px;
+    text-align: center;
+    
+    color: darkgreen;
+    
 }
 h1 {
     color: darkgreen;
+    padding: 5%;
+    text-align: center;
+    
 }
-span {
-    color: rgb(255, 0, 0);
-}
-.livro { /*utilizando box pra posicionar os elementos contidos nesta classe*/
+
+.apresentacao { /*utilizando box pra posicionar os elementos contidos nesta classe*/
     display: flex; 
-    flex-direction: row; 
+    flex-direction: row-reverse; 
     gap: 10px;  /*distancia entre lacuna, lacuna entre linhas, lacuna entre colunas*/
     align-items: center; /*alinha de acordo com o centro do maior iten da lista*/ 
-    justify-content: space-between;
     
+}
+.apresentacao__conteudo{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 50%;
+   
 }
 
 .sumario { /* utilizando strong class, na chamada usamos só o .nomeDaClasse*/ 
     color:blue;
+}
+.textoSumario { /*colocando os textos dentro de um retangulo e configurando margem, borda e cor*/
+       margin: 5px; 
+       border: 2px solid black; 
+       padding: 1px 5px;
+       white-space: pre-line;
+       font-size: 1rem;
+}
+
+span {
+    color: rgb(255, 0, 0);
 }
 
 .textoOrelha {
@@ -70,35 +95,25 @@ span {
 
 
 
-.textoSumario {
-    white-space: pre-line;
-    font-size: 1rem;
-     
-  }
-
-
-.textoSumario { /*colocando os textos dentro de um retangulo e configurando margem, borda e cor*/
-       margin: 5px; 
-       border: 2px solid black; 
-       padding: 1px 5px;
-   }
-
 .textoOrelha { /*colocando os textos dentro de um retangulo e configurando margem, borda e cor*/
        margin: 5px; 
        border: 2px solid black;
-       padding: 1px 5px;
-       
+       padding: 1px 5px;    
    }
 
-   
+.apresentacao__imagem{ 
+    width: 50%;
+}
+
 .livro__botoes {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
+  
     
 
 }
-.livro__botoesCatalogo{ 
+.livro__botoes__Catalogo{ 
     background-color: greenyellow;
     width: 8.125rem; /*largura da caixa*/
     margin: 10px; /*altura entre a divisão do main e dos botoes*/
@@ -119,4 +134,36 @@ span {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 200;
+}
+
+@media (max-width: 1150px) {
+    
+    .cabecalho {
+        padding: 10%;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cabecalho__menu {
+        
+        width: 100%;
+        align-items: baseline;
+        gap: 5%;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+    } 
+    
+    .apresentacao__imagem{
+        width: 100%;
+    }
+
+  
 }
