@@ -98,7 +98,7 @@ span {
     
 
 }
-.livro__botoesRedes{ 
+.livro__botoesCatalogo{ 
     background-color: greenyellow;
     width: 8.125rem; /*largura da caixa*/
     margin: 10px; /*altura entre a divisão do main e dos botoes*/
