@@ -19,6 +19,13 @@
 .cabecalho {
     padding: 1% 0% 0% 15%; /*cima, direita, baixa, esquerda */
 }
+.cabecalho__icone {
+   
+    width: 2rem;
+   
+    color: #22D4FD;
+
+}
 .cabecalho__menu__link {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.25rem;
@@ -103,7 +110,7 @@ body{
     /* background-color: #22D4FD; */
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
     border: 2px outset #22D4FD;
     width: fit-content;
     text-align: center;
