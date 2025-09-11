@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Preto - Vol II</title>
+    <link rel="stylesheet" href="../Styles/styleLivros.css">
+</head>
+<body>
+    <header class="cabecalho">        
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="../index.html">Home</a>
+                <!-- <a class="cabecalho__menu__link" href="../about.html">Sobre</a> -->
+                <a class="cabecalho__menu__link" href="../catalog.html">Catálogo</a>
+                <!-- <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a> -->
+        </nav>
+    </header>
+        <h1 class= ”titulo” >Coleção Pensamento Preto - Vol II</h1>
+  <main class= "apresentacao">  
+
+        <section class="apresentacao__conteudo">
+            
+
+            <p class="textoSumario"> <strong> Sumário </strong> <!-- Utilizando strong class no html-->
+                <span>Pag |Cap  </span>  
+                008 |001 Apresentação ~ Mutuh Nyaneka
+                011 |001 John Edward Bruce ~ Discurso
+                015 |002 Lima Barreto ~ Os Negros
+                023 |003 Malcolm X ~ Algumas Reflexões Sobre a Semana da História Negra
+                037 |004 Frantz Fanon ~ Racismo e Cultura
+                051 |005 Eldridge Cleaver ~ Método, Tempo e Revolução
+                057 |006 Kathleen Cleaver ~ Mulheres, Poder e Revolução
+                065 |007 John Henrik Clarke ~ As Bases Históricas da Africanocentricidade
+                075 |008 Alice Walker ~ Em Busca dos Jardins de Nossas Mães
+                087 |009 Audre Lorde ~ Os Usos da Raiva Mulheres Respondendo ao Racismo
+                099 |010 Ramona África ~ Palestra sobre Mumia Abu-Jamal
+                111 |011 Thereza Santos ~ Mulher Negra
+                119 |012 Thomas Sankara ~ Entrevista
+                133 |013 Nah Dove ~ Mulherismo Africana: Uma Teoria Afrocêntrica
+                161 |014 Carlos Moore ~ A Humanidade Contra Si Mesma
+                199 |015 Patricia Hill Collins ~ O Que é um Nome? Mulherismo, Feminismo Preto e Além Disso
+                219 |016 Fred Aganju ~ O estranho caso da esquerda que esqueceu Rafael Braga
+
+            <p class="textoOrelha">
+                <strong>Texto de orelha </strong><br>
+                A luta do povo preto ainda é a luta pela sobrevivência e pela continuidade.
+                Essencialmente, esse é o objetivo da Coleção Pensamento Preto, ao proporcionar o contato
+                com as reflexões e teses desenvolvidas, em circunstâncias mais adversas, e que serviram
+                como instrumento contra a dominação e toda a lógica daqueles que anseiam por sua
+                aniquilação. Para além do aspecto concreto, a aniquilação também ocorre em face do
+                distanciamento e da negação desse conhecimento, a partir da análise de irmãos e irmãs que
+                projetavam a construção de um posicionamento próprio. Como Malcolm X afirma no
+                capítulo 3 – Que um povo sem história ou raízes culturais também se torna um povo morto.
+                Na segunda edição dessa coleção, novamente será possível o contato tanto com a
+                acuidade de análise de intelectuais como Carlos Moore como da veemência de discursos de
+                Ramona África, sobrevivente a um dos muitos ataques tramados pela supremacia branca,
+                que assim como os demais pensadores convergem na lealdade e no compromisso com que
+                elaboraram suas ideias.</p>
+        
+
+
+        </section>
+        
+        <img class="apresentacao__imagem" src="../assets/ppVol2.jpg" alt="Imagem capa pp2">
+      
+    </main>
+        <div class="livro__botoes">
+          <a id="btn-anterior" class="livro__botoes__Catalogo">Anterior</a>
+          <a class="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
+          <a id="btn-proximo" class="livro__botoes__Catalogo">Próximo</a>
+        </div> 
+        <script>
+            const paginaAtual = window.location.pathname.split("/").pop();
+            const match = paginaAtual.match(/vol(\d+)\.html/);
+
+            if (match) {
+              const numero = parseInt(match[1]);
+              const ultimoVolume = 7;
+            
+              // Botão anterior
+              const btnAnterior = document.getElementById("btn-anterior");
+              if (numero > 1) {
+                btnAnterior.href = `vol${numero - 1}.html`;
+                btnAnterior.style.display = "inline-block"; // garantir visibilidade
+              } else {
+                btnAnterior.style.display = "none";
+              }
+
+              // Botão próximo
+              const btnProximo = document.getElementById("btn-proximo");
+              if (numero < ultimoVolume) {
+                btnProximo.href = `vol${numero + 1}.html`;
+                btnProximo.style.display = "inline-block";
+              } else {
+                btnProximo.style.display = "none";
+              }
+            } else {
+              // Fallback para caso não seja uma página de volume
+              document.getElementById("btn-anterior").style.display = "none";
+              document.getElementById("btn-proximo").style.display = "none";
+            }
+        </script>
+</body>
+<!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
+</html>

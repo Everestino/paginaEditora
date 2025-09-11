@@ -58,7 +58,7 @@ h1 {
     display: flex; 
     flex-direction: row-reverse; 
     gap: 10px;  /*distancia entre lacuna, lacuna entre linhas, lacuna entre colunas*/
-    align-items: center; /*alinha de acordo com o centro do maior iten da lista*/ 
+    align-items: flex-start; /*alinha de acordo com o centro do maior iten da lista*/ 
     
 }
 .apresentacao__conteudo{
@@ -103,6 +103,7 @@ span {
 
 .apresentacao__imagem{ 
     width: 50%;
+    
 }
 
 .livro__botoes {

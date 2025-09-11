@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Preto - Vol V</title>
+    <link rel="stylesheet" href="../Styles/styleLivros.css">
+</head>
+<body>
+    <header class="cabecalho">        
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="../index.html">Home</a>
+                <!-- <a class="cabecalho__menu__link" href="../about.html">Sobre</a> -->
+                <a class="cabecalho__menu__link" href="../catalog.html">Catálogo</a>
+                <!-- <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a> -->
+        </nav>
+    </header>
+        <h1 class= ”titulo” >Coleção Pensamento Preto - Vol V</h1>
+  <main class= "apresentacao">  
+
+        <section class="apresentacao__conteudo">
+            
+
+            <p class="textoSumario"> <strong> Sumário </strong> <!-- Utilizando strong class no html-->
+                <span>Pag |Cap  </span>  
+                008 | 00 - Carlos R. Rocha (Fuca) – Apresentação
+                017 | 01 – W.E.B. Du Bois – África – Seu lugar na história moderna
+                053 | 02 – Amy Jacques Garvey – O papel das mulheres nas lutas de libertação
+                159 | 03 – Richard Wright – Como nasceu Bigger
+                191 | 04 – Queen Mother Audley Moore – Entrevista
+                113 | 05 – Malcolm X – No Audubon
+                135 | 06 – Stokely Carmichael (Kwame Ture) – Pan-Africanismo, Terra e Poder
+                149 | 07 – Robert Mangalisu Sobukwe – Discurso no Colégio Fort Hare
+                157 | 08 – Ahmed Sékou Touré – Uma abordagem dialética da cultura
+                183 | 09 – John Henrik Clarke – Pode o povo africano salvar a si mesmo?
+                223 | 010 – Lélia Gonzalez – Entrevista – A Mulher Negra / Sobre Cheikh Anta Diop
+                235 | 011 – Iva E. Carruthers – Centenários de Deseducação dos Pretos Um estudo da gestão educacional branca
+                254 | 012 – Ifi Amadiume – A teoria dos valores matriarcais como base para a unidade cultural africana
+                267 | 013 – Marimba Ani – Imagens dos outros
+                307 | 014 – Milton Santos – As exclusões da globalização: pobres e negros
+                321 | 015 – Fábio Mandingo – Booker T. Washington, W.E.B. Du Bois e Marcus Mosiah Garvey
+                345 | 016 – Ayana Omi – O nascimento de uma comunidade
+                <span>Apêndice</span>
+                351 | Mumia Abu-Jamal O Homem Malcolm, Admirável Lembrança dos Panteras Pretas, </p>
+
+            <p class="textoOrelha">
+                <strong>Texto de orelha </strong><br>
+                A Coleção Pensamento Preto: Epistemologias do Renascimento Africano foi concebida
+                e materializada com o objetivo de articular a revolta do povo preto, nos dizeres de Cornel
+                West, “a ira preta”, contra a supremacia branca e suas estruturas de poder, que nos seduz,
+                aliena e apaga — no sentido simbólico e físico.
+                Com uma abrangência ampla em aspectos de tempo/espaço, a Coleção Pensamento
+                Preto apresenta um conteúdo que dialoga com a realidade total do povo preto no mundo,
+                ao passo que estabelece a disputa de consciência deste mesmo povo, sem deixar, devido sua
+                diversidade teórica e política, nenhuma brecha epistêmica, além disso, ela tenta empurrar
+                homens e mulheres pretas à reflexão crítica e práxis contundente.
+                A descolonização mental é o objetivo primordial desta coleção, agora em seu quinto
+                volume. Além da descolonização mental, tal obra deixa explícito e implícito o desejo de ver
+                o povo preto organizado em agrupamentos políticos, coletivos, associações e organizações
+                com programas políticos bem definidos e agendas independentes.
+                Neste quinto volume, a Coleção Pensamento Preto nos proporciona textos densos,
+                como os de Malcolm X, Sékou Toure, Du Bois, Marimba Ani e John Henrik Clarke; poéticos,
+                como o de Ayana Omi; provocativos, como o de Richard Wright; atemporais, como o de
+                Stokely Carmichael; reveladores, como o de Milton Santos, etc.; além disso, a Coleção
+                Pensamento Preto tem a preocupação com uma formação política mais ampla, portanto, os
+                textos deste livro dialogam com as contribuições existentes em outros volumes. Na verdade,
+                como já foi exposto em outra oportunidade, a Coleção Pensamento Preto representa mais
+                do que um curso acadêmico formal e convencional de epistemologia, teoria, história,
+                filosofia e ciência política, pan-africanismo e práticas pedagógicas.
+                Tenham todos uma ótima leitura.</p>
+        
+
+
+        </section>
+        
+        <img class="apresentacao__imagem" src="../assets/ppVol5.jpg" alt="Imagem capa pp5">
+      
+    </main>
+        <div class="livro__botoes">
+          <a id="btn-anterior" class="livro__botoes__Catalogo">Anterior</a>
+          <a class="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
+          <a id="btn-proximo" class="livro__botoes__Catalogo">Próximo</a>
+        </div> 
+        <script>
+            const paginaAtual = window.location.pathname.split("/").pop();
+            const match = paginaAtual.match(/vol(\d+)\.html/);
+
+            if (match) {
+              const numero = parseInt(match[1]);
+              const ultimoVolume = 7;
+            
+              // Botão anterior
+              const btnAnterior = document.getElementById("btn-anterior");
+              if (numero > 1) {
+                btnAnterior.href = `vol${numero - 1}.html`;
+                btnAnterior.style.display = "inline-block"; // garantir visibilidade
+              } else {
+                btnAnterior.style.display = "none";
+              }
+
+              // Botão próximo
+              const btnProximo = document.getElementById("btn-proximo");
+              if (numero < ultimoVolume) {
+                btnProximo.href = `vol${numero + 1}.html`;
+                btnProximo.style.display = "inline-block";
+              } else {
+                btnProximo.style.display = "none";
+              }
+            } else {
+              // Fallback para caso não seja uma página de volume
+              document.getElementById("btn-anterior").style.display = "none";
+              document.getElementById("btn-proximo").style.display = "none";
+            }
+        </script>
+</body>
+<!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
+</html>

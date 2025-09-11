@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Preto - Vol IV</title>
+    <link rel="stylesheet" href="../Styles/styleLivros.css">
+</head>
+<body>
+    <header class="cabecalho">        
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="../index.html">Home</a>
+                <!-- <a class="cabecalho__menu__link" href="../about.html">Sobre</a> -->
+                <a class="cabecalho__menu__link" href="../catalog.html">Catálogo</a>
+                <!-- <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a> -->
+        </nav>
+    </header>
+        <h1 class= ”titulo” >Coleção Pensamento Preto - Vol IV</h1>
+  <main class= "apresentacao">  
+
+        <section class="apresentacao__conteudo">
+            
+
+            <p class="textoSumario"> <strong> Sumário </strong> <!-- Utilizando strong class no html-->
+                <span>Pag |Cap  </span>  
+                008 | 00 - AbayOdò – Apresentação
+                011 | 01 – Ida Bell Wells – O registro vermelho
+                093 | 02 – Alain Locke – O Novo Negro
+                107 | 03 – Claudia Jones – Um fim à negligência em relação aos problemas da mulher preta!
+                127 | 04 – Cheikh Anta Diop – Quando podemos falar de um renascimento africano?
+                139 | 05 – Kwame Nkrumah – Consciencismo
+                165 | 06 – Amy Ashwood Garvey – O nascimento da Associação Universal para o Progresso Negro
+                173 | 07 – Amy Jacques Garvey – Uma carta à W. E. B. Du Bois
+                181 | 08 – Jomo Kenyatta – Sistema de casamento
+                199 | 09 – José Correia Leite – O alvorecer de uma ideologia
+                221 | 010 – Walter Rodney – A história preta a serviço da revolução preta
+                231 | 011 – Chinweizu Ibekwe – O pan-africanismo do poder preto
+                283 | 012 – Lélia Gonzalez – A presença negra na cultura brasileira
+                287 | 013 – Frances Cress Welsing – A teoria Cress do confronto das cores e o racismo (supremacia branca)
+                303 | 014 – Sundiata Acoli – Entrevista
+                325 | 015 – Carlos Machado – Ciência, tecnologia e inovação africana
+                339 | 016 – Henry Kam Kah – Kwame Nkrumah e a visão pan-africana</p>
+
+            <p class="textoOrelha">
+                <strong>Texto de orelha </strong><br>
+            A Coleção Pensamento Preto: Epistemologias do Renascimento Africano chega ao seu
+                IV volume, cumprindo com rigor e seriedade duas de suas propostas iniciais: apresentar
+                uma diversidade de biografias, pensamentos, contextos históricos e epistemologias
+                africanas; e oferecer teorias e bases políticas alinhadas ao projeto pan-africanista de
+                renascimento africano.
+                Este volume tem a alegria de trazer em primeira mão no Brasil o famoso e seminal
+                artigo de Cheikh Anta Diop, Quando podemos falar de um renascimento africano?, escrito e
+                publicado em 1948, no qual o autor apresenta as bases do seu pensamento político,
+                filosófico e revolucionário, aprofundado nos 40 anos seguintes. É simbólico tê-lo como
+                contribuição desta coleção, pois, o conceito de renascimento africano proposto por Diop dá
+                nome a este projeto editorial e de formação intelectual e política.
+                Sem dúvida alguma, os autores e os pensamentos que compõem estes quatro volumes
+                conseguem formar qualquer pessoa preta para lidar com a selvageria da supremacia branca,
+                não apenas em aspectos de teoria, mas de fortalecimento físico, psíquico, espiritual e
+                organizacional. Passar por estes quatro volumes, principalmente pela densidade de sua
+                proposta, e compreender a mensagem, equivale, para não dizer que supera, o que é
+                oferecido pelos cursos acadêmicos de universidades brancas e eurocêntricas.</p>
+        
+
+
+        </section>
+        
+        <img class="apresentacao__imagem" src="../assets/ppVol4.jpg" alt="Imagem capa pp4">
+      
+    </main>
+        <div class="livro__botoes">
+          <a id="btn-anterior" class="livro__botoes__Catalogo">Anterior</a>
+          <a class="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
+          <a id="btn-proximo" class="livro__botoes__Catalogo">Próximo</a>
+        </div> 
+        <script>
+            const paginaAtual = window.location.pathname.split("/").pop();
+            const match = paginaAtual.match(/vol(\d+)\.html/);
+
+            if (match) {
+              const numero = parseInt(match[1]);
+              const ultimoVolume = 7;
+            
+              // Botão anterior
+              const btnAnterior = document.getElementById("btn-anterior");
+              if (numero > 1) {
+                btnAnterior.href = `vol${numero - 1}.html`;
+                btnAnterior.style.display = "inline-block"; // garantir visibilidade
+              } else {
+                btnAnterior.style.display = "none";
+              }
+
+              // Botão próximo
+              const btnProximo = document.getElementById("btn-proximo");
+              if (numero < ultimoVolume) {
+                btnProximo.href = `vol${numero + 1}.html`;
+                btnProximo.style.display = "inline-block";
+              } else {
+                btnProximo.style.display = "none";
+              }
+            } else {
+              // Fallback para caso não seja uma página de volume
+              document.getElementById("btn-anterior").style.display = "none";
+              document.getElementById("btn-proximo").style.display = "none";
+            }
+        </script>
+</body>
+<!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
+</html>

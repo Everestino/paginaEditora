@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Preto - Vol I</title>
+    <link rel="stylesheet" href="../Styles/styleLivros.css">
+</head>
+<body>
+    <header class="cabecalho">        
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="../index.html">Home</a>
+                <!-- <a class="cabecalho__menu__link" href="../about.html">Sobre</a> -->
+                <a class="cabecalho__menu__link" href="../catalog.html">Catálogo</a>
+                <!-- <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a> -->
+        </nav>
+    </header>
+        <h1 class= ”titulo” >Coleção Pensamento Preto - Vol I</h1>
+  <main class= "apresentacao">  
+
+        <section class="apresentacao__conteudo">
+            
+
+            <p class="textoSumario"> <strong> Sumário </strong> <!-- Utilizando strong class no html-->
+                <span>Pag |Cap  </span>  
+                 18 | 01. Apresentação – Gilson Hotep
+                111 | 01. Nat Turner – Confissão
+                125 | 02. Luiz Gama – Carta a Ferreira de Menezes
+                131 | 03. John Henrik Clarke – Pan-Africanismo e o Futuro da Família Africana
+                143 | 04. Amílcar Cabral – Unidade e Luta
+                167 | 05. Martin Luther King Jr. – Eu Tenho um Sonho
+                173 | 06. Rosa Amelia Plummelle-Uribe – Da Barbárie Colonial à Política Nazista de Extermínio
+                189 | 07. James Baldwin e Audre Lorde – Esperança Revolucionária
+                101 | 08. Stokely Carmichael e Molefi Kete Asante – África e o Futuro
+                133 | 09. Assata Shakur – A Autobiografia: Capítulo 1
+                153 | 10. Nah Dove – Uma Crítica Africano-Centrada à Lógica Marx
+                185 | 11. Clenora Hudson-Weems – Mulherismo Africana: O Outro Lado da Moeda
+                207 | 12. Afeni Shakur – Nós Vamos Vencer: Uma Carta da Prisão
+                213 | 13. Cornel West – O Dilema do Intelectual Preto
+                233 | 14. bell hooks – Mulheres Pretas Intelectuais
+                255 | 15. Milton Barbosa – Um Pouco de História Não-Oficial
+                263 | 16. Mutulu Shakur – Ao Meu Filho
+
+            <p class="textoOrelha">
+                <strong>Texto de orelha </strong><br>
+                            A Coleção Pensamento Preto: Epistemologias do Renascimento Africano tem o
+                objetivo de fornecer um repertório teórico para àqueles que pretendem combater a
+                supremacia branca “por todos os meios necessários”: seja no fortalecimento da
+                subjetividade, na descolonização mental, na academia ou no interior do movimento panafricano.
+                Entendendo, como diz o nosso griot, que “a melhor forma de luta, é todas as lutas
+                juntas” e que, em última análise, o que vai definir a coerência e efetividade das ações não
+                são as teorias adotadas, mas a verdade, o comprometimento e o amor contido em cada
+                ação, o leitor tem em mãos um rico e multifacetado acervo intelectual e político
+                acumulando dentro de um período de quase dois séculos, que vai desde o testemunho em
+                primeira pessoa de Nat Turner e sua rebelião emblemática ao discurso, controverso, porém
+                lendário, de Martin Luther King; do feminismo preto e radical de Audre Lorde ao
+                revolucionário e alternativo mulherismo africana de Clenora Hudson; do pan-africanismo
+                por essência de John Henrik Clarke ao chamado à organização e luta de Stokely
+                Carmichael; da retórica e oratória sagaz e poderosamente engajada de Luiz Gama ao
+                tratado acusatório e incontestável de Plumelle-Uribe, etc. Vivemos um período crucial na
+                luta pela sobrevivência do povo preto, uma vez que na medida que a supremacia branca
+                (capitalismo) vai entrando em um estágio de bifurcação histórica, como já é sentido, devido
+                o recrudescimento do racismo, do imperialismo e de uma mentalidade conservadora e
+                beligerante que valoriza a vida das “minorias” cada vez menos, ele vai adensar a sua
+                máquina de destruição e reafirmação do seu projeto civilizatório; assim, faz-se necessário
+                compreender o modus operandi deste projeto e, paralelo a isso, construir um projeto
+                civilizatório próprio e alternativo, fundamentado em nossas tradições culturais e valores
+                éticos e morais. E, nesse ponto, é importante dizer que não existe nada de novo em nossa
+                luta; portanto, que resgatemos o poderoso projeto de Renascimento Africano levado a cabo,
+                desde a Grande Revolução Haitiana, por Marcus Garvey, Anta Diop, John H. Clarke, Steve
+                Biko, Stokely Carmichael, Nah Dove, Assata Shakur, etc.</p>
+        
+
+
+        </section>
+        
+        <img class="apresentacao__imagem" src="../assets/ppVol1.jpg" alt="Imagem capa pp1">
+      
+    </main>
+        <div class="livro__botoes">
+          <a id="btn-anterior" class="livro__botoes__Catalogo">Anterior</a>
+          <a class="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
+          <a id="btn-proximo" class="livro__botoes__Catalogo">Próximo</a>
+        </div> 
+        <script>
+            const paginaAtual = window.location.pathname.split("/").pop();
+            const match = paginaAtual.match(/vol(\d+)\.html/);
+
+            if (match) {
+              const numero = parseInt(match[1]);
+              const ultimoVolume = 7;
+            
+              // Botão anterior
+              const btnAnterior = document.getElementById("btn-anterior");
+              if (numero > 1) {
+                btnAnterior.href = `vol${numero - 1}.html`;
+                btnAnterior.style.display = "inline-block"; // garantir visibilidade
+              } else {
+                btnAnterior.style.display = "none";
+              }
+
+              // Botão próximo
+              const btnProximo = document.getElementById("btn-proximo");
+              if (numero < ultimoVolume) {
+                btnProximo.href = `vol${numero + 1}.html`;
+                btnProximo.style.display = "inline-block";
+              } else {
+                btnProximo.style.display = "none";
+              }
+            } else {
+              // Fallback para caso não seja uma página de volume
+              document.getElementById("btn-anterior").style.display = "none";
+              document.getElementById("btn-proximo").style.display = "none";
+            }
+        </script>
+</body>
+<!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
+</html>

@@ -10,9 +10,9 @@
     <header class="cabecalho">        
             <nav class="cabecalho__menu">
                 <a class="cabecalho__menu__link" href="../index.html">Home</a>
-                <a class="cabecalho__menu__link" href="../about.html">Sobre</a>
+                <!-- <a class="cabecalho__menu__link" href="../about.html">Sobre</a> -->
                 <a class="cabecalho__menu__link" href="../catalog.html">Catálogo</a>
-                <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a>
+                <!-- <a class="cabecalho__menu__link" href="../artigos.html">Artigos</a> -->
         </nav>
     </header>
         <h1 class= ”titulo” >Coleção Pensamento Preto - Vol III</h1>
@@ -76,14 +76,42 @@
         <img class="apresentacao__imagem" src="../assets/ppVol3.jpg" alt="Imagem capa pp3">
       
     </main>
-           <div class="livro__botoes">
+        <div class="livro__botoes">
+          <a id="btn-anterior" class="livro__botoes__Catalogo">Anterior</a>
+          <a class="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
+          <a id="btn-proximo" class="livro__botoes__Catalogo">Próximo</a>
+        </div> 
+        <script>
+            const paginaAtual = window.location.pathname.split("/").pop();
+            const match = paginaAtual.match(/vol(\d+)\.html/);
+
+            if (match) {
+              const numero = parseInt(match[1]);
+              const ultimoVolume = 7;
             
-            <a class ="livro__botoes__Catalogo" href =""> Próximo </a>
-            <a class ="livro__botoes__Catalogo" href="../catalog.html">Lista</a>
-            <a class ="livro__botoes__Catalogo" href =""> Anterior </a>
-           
-            
-            </div>   
+              // Botão anterior
+              const btnAnterior = document.getElementById("btn-anterior");
+              if (numero > 1) {
+                btnAnterior.href = `vol${numero - 1}.html`;
+                btnAnterior.style.display = "inline-block"; // garantir visibilidade
+              } else {
+                btnAnterior.style.display = "none";
+              }
+
+              // Botão próximo
+              const btnProximo = document.getElementById("btn-proximo");
+              if (numero < ultimoVolume) {
+                btnProximo.href = `vol${numero + 1}.html`;
+                btnProximo.style.display = "inline-block";
+              } else {
+                btnProximo.style.display = "none";
+              }
+            } else {
+              // Fallback para caso não seja uma página de volume
+              document.getElementById("btn-anterior").style.display = "none";
+              document.getElementById("btn-proximo").style.display = "none";
+            }
+        </script>
 </body>
 <!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
 </html>
