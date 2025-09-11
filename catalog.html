@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
     <link rel="stylesheet" href="./Styles/style.css">
+    
+    
 </head>
 <body>
     <header class="cabecalho">        
@@ -18,44 +20,64 @@
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Livros</h1>
+             <!-- <button onclick="ordenar()">Ordenar A-Z</button> -->
             
             <div class="apresentacao__conteudo__catalogo">
 
-            <ul class="apresentacao__conteudo__livros"> 
-            <li><a class="apresentacao__conteudo__texto" href="">Autobiografia de Malcolm X </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Escrevo o que eu quero - Steve Biko </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Stokely Fala: do poder preto ao pan-africanismo - Stokely Carmichael (Kwame Ture). </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Primavera para as rosas negras: Lélia Gonzalez em primeira pessoa… - Lélia Gonzalez.</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Beatriz Nascimento - Quilombola e Intelectual: Possibilidade nos dias da destruição - Maria Beatriz Nascimento. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">O Protesto Preto: James Baldwin, Malcolm X e Martin Luther King - Kenneth Bancroft Clark. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">O Pan-Africanismo: apontamentos e reflexões - Abiṣogun Ọlátúnjí Odùduwà. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Às irmãs: Mulheres africanas na revolução preta mundial - Abiṣogun Ọlátúnjí Odùduwà. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">O levante dos nossos filhos: uma contribuição à revolução panafricana. - Abiṣogun Ọlátúnjí Odùduwà. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Terra Preta: raça, racismo e política racial no Movimento dos Trabalhadores Rurais Sem-Terra - Fred Aganju Santiago Ferreira. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Ancestralidade Afrikana: para colorir e aprender - Kenyatta Mugo & Tuana Patiara. </a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Quando a África despertar: a “história oculta” das aspirações e lutas do Novo Negro no mundo Ocidental - Hubert Henry Harrison.</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Garvey, Lumumba e Malcolm: Nacionalistas-separatistas pretos - Shawna Maglangbayan.</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Descolonização mental: a política da linguagem na literatura africana - Ngũgĩ wa Thiong’o.</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="">Mensagem para o povo: Curso de Filosofia Africana - Marcus Mosiah Garvey.</a> </li>
-            
-            <br><p class="apresentacao__conteudo__texto"><strong>Coleção Pensamento Preto</strong></p>
-            <ul class="apresentacao__conteudo__listaPP"> 
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol1.html">Volume 1</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol2.html">Volume 2</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol3.html">Volume 3</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol4.html">Volume 4</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol5.html">Volume 5</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol6.html">Volume 6</a> </li>
-            <li><a class="apresentacao__conteudo__texto" href="./Livros/vol7.html">Volume 7</a> </li>
+            <ul class="conteudo__livros" id="lista-livros"> 
 
-            </ul>
+                <li><a class="conteudo__texto" href="">Autobiografia de Malcolm X - Malcolm X e Alex Haley. </a> </li>
+                <li><a class="conteudo__texto" href="">Escrevo o que eu quero - Steve Biko </a> </li>
+                <li><a class="conteudo__texto" href="">Stokely Fala: do poder preto ao pan-africanismo - Stokely Carmichael (Kwame Ture). </a> </li>
+                <li><a class="conteudo__texto" href="">Primavera para as rosas negras: Lélia Gonzalez em primeira pessoa… - Lélia Gonzalez.</a> </li>
+                <li><a class="conteudo__texto" href="">Beatriz Nascimento - Quilombola e Intelectual: Possibilidade nos dias da destruição - Maria Beatriz Nascimento. </a> </li>
+                <li><a class="conteudo__texto" href="">O Protesto Preto: James Baldwin, Malcolm X e Martin Luther King - Kenneth Bancroft Clark. </a> </li>
+                <li><a class="conteudo__texto" href="">O Pan-Africanismo: apontamentos e reflexões - Abiṣogun Ọlátúnjí Odùduwà. </a> </li>
+                <li><a class="conteudo__texto" href="">Às irmãs: Mulheres africanas na revolução preta mundial - Abiṣogun Ọlátúnjí Odùduwà. </a> </li>
+                <li><a class="conteudo__texto" href="">O levante dos nossos filhos: uma contribuição à revolução panafricana. - Abiṣogun Ọlátúnjí Odùduwà.</a> </li>
+                <li><a class="conteudo__texto" href="">Terra Preta: raça, racismo e política racial no Movimento dos Trabalhadores Rurais Sem-Terra - Fred Aganju Santiago Ferreira. </a> </li>
+                <li><a class="conteudo__texto" href="">Ancestralidade Afrikana: para colorir e aprender - Kenyatta Mugo & Tuana Patiara.</a> </li>
+                <li><a class="conteudo__texto" href="">Quando a África despertar: a “história oculta” das aspirações e lutas do Novo Negro no mundo Ocidental - Hubert Henry Harrison.</a> </li>
+                <li><a class="conteudo__texto" href="">Garvey, Lumumba e Malcolm: Nacionalistas-separatistas pretos - Shawna Maglangbayan.</a> </li>
+                <li><a class="conteudo__texto" href="">Descolonização mental: a política da linguagem na literatura africana - Ngũgĩ wa Thiong’o.</a> </li>
+                <li><a class="conteudo__texto" href="">Mensagem para o povo: Curso de Filosofia Africana - Marcus Mosiah Garvey.</a> </li>
+                
+                
+                <p class="conteudo__texto"><strong>Coleção Pensamento Preto</strong></p>
+
+                
+                
+                <li><a class="conteudo__texto" href="./Livros/vol1.html">Coleção Pensamento Preto - Volume 1</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol2.html">Coleção Pensamento Preto - Volume 2</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol3.html">Coleção Pensamento Preto - Volume 3</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol4.html">Coleção Pensamento Preto - Volume 4</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol5.html">Coleção Pensamento Preto - Volume 5</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol6.html">Coleção Pensamento Preto - Volume 6</a> </li>
+                <li><a class="conteudo__texto" href="./Livros/vol7.html">Coleção Pensamento Preto - Volume 7</a> </li>
+
+                </ul>
             </div>
         </section>
-        <img class="apresentacao__imagem" src="./assets/sankofaEdsf.png" alt="Logo da editora">
+        <!-- <img class="apresentacao__imagem" src="./assets/sankofaEdsf.png" alt="Logo da editora"> -->
     
         
     </main>
-    
+
+ <script> //esse aqui tá funcionando certinho pra jogar no catalog
+
+   function ordenar() {
+     let lista = document.getElementById("lista-livros");
+     let itens = Array.from(lista.getElementsByTagName("li"));
+     // ordena os textos alfabeticamente
+     itens.sort((a, b) => a.textContent.localeCompare(b.textContent));
+     // limpa a lista original
+     lista.innerHTML = "";
+     // adiciona novamente em ordem
+     itens.forEach(item => lista.appendChild(item));
+   }
+   ordenar();
+ </script>
+
 </body>
 <!-- <footer class="rodape"> Desenvolvido por Éfibeh </footer> -->
 </html>
