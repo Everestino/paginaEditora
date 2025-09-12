@@ -37,7 +37,7 @@
 .cabecalho__menu {
     display: flex;
     gap: 80px;
-    padding-bottom: 4%;
+    padding-bottom: 10%;
 }
 
 body{
